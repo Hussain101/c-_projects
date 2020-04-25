@@ -4,29 +4,17 @@ using namespace std;
 
 int main()
 {
-    string choice;
-    do
+    int x ,y, z;
+    cout << "This program show the multiplication table of number of its multiple" << endl;
+    cout << "Enter the number-" ;
+    cin >> x ;
+    cout << "Enter the value of y=" ;
+    cin >> y ;
+    cout << endl ;
+        for(z=1 ; z<=y; z++)
     {
-    int days  , sizee ;
+      cout << x << '*' << z << "=" << x*z << "\n" ;
+    }
 
-    cout << "Enter the initial size of population of green crud " ;
-    cin >> sizee ;
-    cout << "Enter the number of days after you want to calculate the size" ;
-    cin >> days ;
-    int day_count=days/5 ;
-    int f1=sizee , f2=sizee , f=sizee ;
-    for(int i;(i<=day_count&&day_count>1);i++)
-    {
-    f=f1+f2;
-    f1=f2;
-    f2=f;
-    }
-    cout << "\nThe new size of population is" << f << "pounds";
-    cout << "\nDo you want to calculate again";
-    cout << "Enter Y for yes and N for NO" ;
-    cin >> choice ;
-    }
-    while(choice== "Y"||choice=="y");
-        cout << "thats all" ;
     return 0;
 }
