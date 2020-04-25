@@ -4,12 +4,21 @@ using namespace std;
 
 int main()
 {
-    double sum=0;
-    cout << "This program calculates the sum of the series 1+1/2+1/3+1/4+..........1/45" << endl;
-    for(double n=1; n<=45; n++)
+    int n ,x=0 ,y=0 ;
+    cout << "Hello! This program calculates the sum of the even and odd numbers." << endl;
+    for(int n=1; n<=20 ; n++)
     {
-        sum=sum+1/n ;
+        if((n%2!=0))
+        {
+            x+=n ;
+        }
+        else
+        {
+            y+=n ;
+        }
+
     }
-    cout << "The sum of the series=" << sum << endl ;
+    cout << "The sum of the first ten odd numbers=" << x << endl ;
+    cout << "The sum of the first ten even numbers=" << y << endl ;
     return 0;
 }
