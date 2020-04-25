@@ -4,14 +4,23 @@ using namespace std;
 
 int main()
 {
-    	int f1=1 , f2=1 ,f=1 ;
-    	cout << "THis program calculates the fibonacci series upto 200 \n" ;
-        for(int i=2; (f1<=200); i++)
-        {
-            cout << f1 << endl;
-            f=f1+f2 ;
-            f1=f2 ;
-            f2=f;
-        }
+    int weight , cost ;
+    string location ;
+    cout << "Welcome!to the HS courier agency Multan\n" << endl;
+    cout << "This program calculates the charges of the parcel.\n" ;
+    cout << "Enter the weight of the parcel in kg=" ;
+    cin >> weight ;
+    cout << "\n Enter the delivery location=" ;
+    cin >> location ;
+    if (location== "lahore"||location== "Lahore" )
+    {
+        cost = (weight*2)+20 ;
+
+    }
+    else
+    {
+        cost = (weight*2)+40 ;
+    }
+    cout  << "The cost of parcel is" << cost << "\n" ;
     return 0;
 }
