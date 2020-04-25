@@ -4,34 +4,12 @@ using namespace std;
 
 int main()
 {
-    int pA , pB , year=1;
-    double rA , rB ;
-
-    cout << "Enter the population of town A" ;
-    cin >> pA ;
-    cout << "Enter the growth rate of town A" ;
-    cin >> rA ;
-    cout << "Enter the population of town B" ;
-    cin >> pB ;
-    cout << "Enter the growth rate of town b" ;
-    cin >> rB ;
-    if(pA<pB && rA>rB)
+    double sum=0;
+    cout << "This program calculates the sum of the series 1+1/2+1/3+1/4+..........1/45" << endl;
+    for(double n=1; n<=45; n++)
     {
-        for(year ; pA<pB ; year++)
-        {
-            (pA=((rA/100)*pA)+pA) ;
-            (pB=((rB/100)*pB)+pB) ;
-
-
-        }
-        cout << "Town A will surpass town B after " << year << "years \n" << endl ;
-        cout << "The final population of town A =" << pA<< ".\n" ;
-         cout << "The final population of town B =" << pB<< ".\n" ;
-
+        sum=sum+1/n ;
     }
-    else
-    {
-        cout << "Invslid data." ;
-    }
+    cout << "The sum of the series=" << sum << endl ;
     return 0;
 }
