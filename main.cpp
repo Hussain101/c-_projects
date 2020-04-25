@@ -4,15 +4,24 @@ using namespace std;
 
 int main()
 {
-    int num ,factorial=1 ;
-
-    cout << "This program finds the factorial of the integer" << endl;
-    cout << "Enter the integer=" ;
-    cin >> num ;
-    for(int x=1; x<=num; x++)
+    float y=62.4 ;
+    float radius, volume;
+    double weight,fb ;
+    cout << "This program will calculate the bouyant force and tells the user\n whether the sphere will float or sink!"<< endl;
+    cout  << endl ;
+    cout << "Enter the weight of the object in lbs=" ;
+    cin >> weight ;
+    cout << "Enter the radius of the object in feet=" ;
+    cin >> radius ;
+    radius=(4/3)*3.14*(radius*radius*radius) ;
+    fb = volume*y ;
+    if(fb>=weight)
     {
-        factorial*=x;
+        cout << "This sphere will float!" << endl ;
     }
-    cout << "The factorial of the integer_" << num << "is_" << factorial << endl ;
+    else
+    {
+        cout << "This sphere will sink!";
+    }
     return 0;
 }
