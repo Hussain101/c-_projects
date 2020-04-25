@@ -4,21 +4,24 @@ using namespace std;
 
 int main()
 {
-    int n ,x=0 ,y=0 ;
-    cout << "Hello! This program calculates the sum of the even and odd numbers." << endl;
-    for(int n=1; n<=20 ; n++)
+    int n ;
+    double answer ,guess,previous ,r;
+    cout << "This program will calculate the square root of the number \n using the babaybolian algorithm." << endl ;
+    cout << "Enter a whole  number="
+;
+    cin >> n ;
+    r=n/guess;
+    guess=(guess+r)/2;
+    previous+=guess;
+    while(n>guess);
     {
-        if((n%2!=0))
-        {
-            x+=n ;
-        }
+        if(previous<=(guess*0.01)+guess)
+            answer+=previous;
         else
-        {
-            y+=n ;
-        }
-
+            r=n/guess;
+    guess=(guess+r)/2;
+    previous+=guess;
     }
-    cout << "The sum of the first ten odd numbers=" << x << endl ;
-    cout << "The sum of the first ten even numbers=" << y << endl ;
+    cout << "The square root of_" << n << "is_" << answer ;
     return 0;
 }
