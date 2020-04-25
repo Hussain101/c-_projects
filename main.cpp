@@ -4,20 +4,15 @@ using namespace std;
 
 int main()
 {
-    int num , binary=0 ;
-    int i = 1 , rem ;
-    cout << "This program converts the number into its equivalent binary number." << endl;
-    cout << "Enter the number=" ;
+    int num ,factorial=1 ;
+
+    cout << "This program finds the factorial of the integer" << endl;
+    cout << "Enter the integer=" ;
     cin >> num ;
-
-    while(num!=0)
+    for(int x=1; x<=num; x++)
     {
-
-        rem = num%2;
-        num /=2 ;
-        binary += rem*i ;
-         i*=10 ;
+        factorial*=x;
     }
-    cout << "The equivalent number is =" << binary ;
+    cout << "The factorial of the integer_" << num << "is_" << factorial << endl ;
     return 0;
 }
