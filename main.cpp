@@ -4,21 +4,25 @@ using namespace std;
 
 int main()
 {
-    int num_exc , possiblep , recievedp ;
-    double total_rec=0 , total_poss=0 ;
-    cout << "This program calculates the total grades for n excercise of a classroom as a percentage\n";
-    cout << "How many excercise to input=" ;
-    cin >> num_exc ;
-    for(int i=1 ;i<=num_exc ; i++ )
+    int n ,i ,logic =0;
+    cout << "Hello!This program checks the number is prime or not! " << endl;
+    cout << "Enter the positive number=" ;
+    cin >> n ;
+    for(i=2;i=n/2;++i)
     {
-        cout << "Score recieved for the excercise" << i <<  "=" ;
-        cin >> recievedp ;
-        cout << "\nTotal points possible for excercise"<< i << "=" ;
-        cin >> possiblep ;
-        cout << endl ;
-        total_rec+=recievedp;
-        total_poss+=possiblep;
+        if(n%1==0)
+        {
+            logic=1;
+            break;
+        }
+        if(logic==0)
+        {
+            cout << n << "is a prime number" ;
+        }
+        else
+        {
+            cout << n << "is not a prime number" ;
+        }
     }
-    cout << " Your total is " << total_rec << "out of " << total_poss << "or" << 100 *(total_rec/total_poss) << "%" ;
     return 0;
 }
