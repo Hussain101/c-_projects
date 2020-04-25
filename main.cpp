@@ -4,23 +4,21 @@ using namespace std;
 
 int main()
 {
-    int weight , cost ;
-    string location ;
-    cout << "Welcome!to the HS courier agency Multan\n" << endl;
-    cout << "This program calculates the charges of the parcel.\n" ;
-    cout << "Enter the weight of the parcel in kg=" ;
-    cin >> weight ;
-    cout << "\n Enter the delivery location=" ;
-    cin >> location ;
-    if (location== "lahore"||location== "Lahore" )
+    int num_exc , possiblep , recievedp ;
+    double total_rec=0 , total_poss=0 ;
+    cout << "This program calculates the total grades for n excercise of a classroom as a percentage\n";
+    cout << "How many excercise to input=" ;
+    cin >> num_exc ;
+    for(int i=1 ;i<=num_exc ; i++ )
     {
-        cost = (weight*2)+20 ;
-
+        cout << "Score recieved for the excercise" << i <<  "=" ;
+        cin >> recievedp ;
+        cout << "\nTotal points possible for excercise"<< i << "=" ;
+        cin >> possiblep ;
+        cout << endl ;
+        total_rec+=recievedp;
+        total_poss+=possiblep;
     }
-    else
-    {
-        cost = (weight*2)+40 ;
-    }
-    cout  << "The cost of parcel is" << cost << "\n" ;
+    cout << " Your total is " << total_rec << "out of " << total_poss << "or" << 100 *(total_rec/total_poss) << "%" ;
     return 0;
 }
