@@ -4,15 +4,29 @@ using namespace std;
 
 int main()
 {
-	int f1=1,f2=1,f=1 ;
-	
-    cout << "This proga=ram is for generate a serires of fibaonnci upto 200" << endl;
-    for (int i=2 ; (f1<=200);i++)
+    string choice;
+    do
     {
-    	cout << f1 << endl;
-    	f=f1+f2;
-    	f1=f2;
-    	f=f2;
-	}
+    int days  , sizee ;
+
+    cout << "Enter the initial size of population of green crud " ;
+    cin >> sizee ;
+    cout << "Enter the number of days after you want to calculate the size" ;
+    cin >> days ;
+    int day_count=days/5 ;
+    int f1=sizee , f2=sizee , f=sizee ;
+    for(int i;(i<=day_count&&day_count>1);i++)
+    {
+    f=f1+f2;
+    f1=f2;
+    f2=f;
+    }
+    cout << "\nThe new size of population is" << f << "pounds";
+    cout << "\nDo you want to calculate again";
+    cout << "Enter Y for yes and N for NO" ;
+    cin >> choice ;
+    }
+    while(choice== "Y"||choice=="y");
+        cout << "thats all" ;
     return 0;
 }
